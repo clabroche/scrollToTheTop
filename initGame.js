@@ -8,5 +8,5 @@ const score = document.getElementById('score')
 const scrollContainer = document.querySelector('.scroll-container')
 const defaultScore = +localStorage.getItem('item') || 1
 console.log(defaultScore)
-addChunks(defaultScore, 1000)
+addChunks(defaultScore, 2)
 window.scrollTo(0, document.body.scrollHeight);
