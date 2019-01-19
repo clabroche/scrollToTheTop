@@ -9,8 +9,8 @@ setInterval(_=> {
     elem.nextElementSibling.remove()
   }
   const topItem = document.querySelector('.scroll-item')
-  if(+score.innerHTML > +topItem.id - 5) {
-    addChunks(+topItem.id + 1)
+  if(+score.innerHTML > +topItem.id - 50) {
+    addChunks(+topItem.id + 1, 1000)
   }
   localStorage.setItem('item', +score.innerHTML)
 }, 50)

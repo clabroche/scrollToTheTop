@@ -1,6 +1,6 @@
-function addChunks(min = 1) {
+function addChunks(min = 1, nb) {
   console.log('add')
-  const max = min + 20
+  const max = min + nb
   for (min; min < max; min++) {
     const clone = ref.cloneNode(true)
     clone.setAttribute('id', min)
