@@ -13,5 +13,5 @@ setInterval(_=> {
     addChunks(+topItem.id + 1, 1000)
   }
   localStorage.setItem('item', +score.innerHTML)
-}, 50)
+}, 100)
 
