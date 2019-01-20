@@ -11,7 +11,7 @@ function addChunks(min = 1, nb) {
     scrollContainer.prepend(clone)
   }
   changeStyle()
-}
+} 
 
 function changeStyle() {
   document.querySelectorAll('.even').forEach(even => {
