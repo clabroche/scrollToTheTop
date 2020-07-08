@@ -41,15 +41,10 @@ jobs:
         keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
         keyPassword: ${{ secrets.KEY_PASSWORD }}
 
-    - name: Move signed apk
-      run: mv ${SIGNED_RELEASE_FILE} server/public/rhea.apk
-
-    - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+    - name: Publish
+      uses: r0adkll/upload-google-play@v1
       with:
-        name: clabroche/docker-registry/rhea
-        username: ${{ secrets.DOCKER_HUB_USER }}
-        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-        registry: docker.pkg.github.com
-        tags: "latest,${{ env.RELEASE_VERSION }}"
-  
+        serviceAccountJson: ${{ SERVICE_ACCOUNT_JSON }}
+        packageName: com.coco.scrollToTheTop
+        releaseFile: ${{ SIGNED_RELEASE_FILE}}
+        track: production
