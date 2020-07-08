@@ -6,7 +6,7 @@ body {
 }
 .scroll-container {
   margin: auto;
-  width: 50vw;
+  width: 90vw;
   background-color: red;
   height: 100vh;
 }

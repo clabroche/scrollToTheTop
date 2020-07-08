@@ -1,19 +1,19 @@
-function addChunks(min = 1, nb) {
-  console.log('add')
+const elements = require('./elements')
+module.exports.addChunks = function(min = 1, nb) {
   const max = min + nb
   for (min; min < max; min++) {
-    const clone = ref.cloneNode(true)
+    const clone = elements.ref.cloneNode(true)
     clone.setAttribute('id', min)
     clone.classList.remove('even')
     min % 2 === 0 ?
       clone.classList.add('odd') :
       clone.classList.add('even')
-    scrollContainer.prepend(clone)
+    elements.scrollContainer.prepend(clone)
   }
-  changeStyle()
+  this.changeStyle()
 } 
 
-function changeStyle() {
+module.exports.changeStyle = function() {
   document.querySelectorAll('.even').forEach(even => {
     even.style.background = `linear-gradient(to bottom, ${color2.value} ${minOffset.value}%, ${color1.value} ${maxOffset.value}%)`
   })
