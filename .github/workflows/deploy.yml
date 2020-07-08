@@ -42,6 +42,12 @@ jobs:
         keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
         keyPassword: ${{ secrets.KEY_PASSWORD }}
 
+    - name: Publish github
+      uses: actions/upload-artifact@v2
+      with:
+        name: scrollToTheTop.apk
+        path: ${{ steps.sign-android-app.outputs.signedReleaseFile }}
+
     - name: Publish
       uses: r0adkll/upload-google-play@v1
       with:
@@ -49,3 +55,4 @@ jobs:
         packageName:  ${{ secrets.PACKAGE_NAME }}
         releaseFile: ${{ steps.sign-android-app.outputs.signedReleaseFile }}
         track: production
+      
