@@ -1,6 +1,0 @@
-const helpers = require('./helpers')
-const init = require('./initGame')
-const loop = require('./loop')
-init.initInput()
-init.initGame()
-loop.launch()
