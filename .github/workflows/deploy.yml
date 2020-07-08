@@ -46,6 +46,6 @@ jobs:
       uses: r0adkll/upload-google-play@v1
       with:
         serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
-        packageName: Scroll to the top
+        packageName:  ${{ secrets.PACKAGE_NAME }}
         releaseFile: ${{ steps.sign-android-app.outputs.signedReleaseFile }}
         track: production
