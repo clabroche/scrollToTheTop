@@ -34,7 +34,7 @@ jobs:
       run: npx cap sync
 
     - name: Build apk
-      run: cd android && ./gradlew assembleRelease
+      run: cd android && echo $BUILD_NUMBER && echo $RELEASE_VERSION && ./gradlew assembleRelease
 
     - name: Android apksigner
       id: sign-android-app
