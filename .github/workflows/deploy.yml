@@ -12,6 +12,10 @@ jobs:
       with:
         cordova-version: 8
 
+    - name: Generate build number
+      uses: einaregilsson/build-number@v2 
+      with:
+        token: ${{secrets.GITHUB_TOKEN}}     
 
     - name: Checkout
       uses: actions/checkout@master
