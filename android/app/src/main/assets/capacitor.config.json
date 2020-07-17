@@ -1,1 +1,13 @@
-{"appId":"com.coco.scrollToTheTop","appName":"Scroll to the Top","bundledWebRuntime":false,"webDir":"./dist"}
+{
+  "appId":"com.coco.scrollToTheTop",
+  "appName":"Scroll to the Top",
+  "bundledWebRuntime":false,
+  "webDir":"./dist",
+  "plugins": {
+    "SplashScreen": {
+      "showSpinner": true,
+      "splashImmersive": true
+    }
+  },
+  "linuxAndroidStudioPath": "/usr/bin/studio.sh"
+}
